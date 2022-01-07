@@ -13,25 +13,28 @@ function ExpenseForm() {
   });
 
   function titleChangeHandler(event) {
-    setUserInput({
-      ...userInput,
-      userTitle: event.target.value,
-    });
-  }
-
+    setUserInput = ((prev) => {
+      return {
+        ...prev,
+        userTitle: event.target.value,
+      };
+    }
+    
   function amountChangeHandler(event) {
-    setUserInput({
-      ...userInput,
-      userAmount: event.target.value,
-    });
-  }
+    setUserInput = ((prev) => {
+      return {
+        ...prev,
+        userAmount: event.target.value,
+      };
+    }
 
   function dateChangeHandler(event) {
-    setUserInput({
-      ...userInput,
-      userDate: event.target.value,
-    });
-  }
+    setUserInput = ((prev) => {
+      return {
+        ...prev,
+        userDate: event.target.value,
+      };
+    }
 
   return (
     <form>
